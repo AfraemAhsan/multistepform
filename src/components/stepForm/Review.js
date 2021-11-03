@@ -18,7 +18,7 @@ const Review = ({ formData, navigation }) => {
     nickName,
     address,
     city,
-    state,
+
     zip,
     phone,
     email,
@@ -38,20 +38,12 @@ const Review = ({ formData, navigation }) => {
       <RenderAccordion
         summary="Address"
         go={go}
-        details={[
-          { "Address ": address },
-          { "City ": lastName },
-          { " Zip ": zip },
-        ]}
+        details={[{ "Address ": address }, { "City ": city }, { " Zip ": zip }]}
       />
       <RenderAccordion
         summary="Contact"
         go={go}
-        details={[
-          { Phone: phone },
-          { "Email ": email },
-          { "Nick Name ": nickName },
-        ]}
+        details={[{ Phone: phone }, { "Email ": email }]}
       />
       <Button
         color="primary"
@@ -91,3 +83,4 @@ export const RenderAccordion = ({ summary, details, go }) => (
     </AccordionDetails>
   </Accordion>
 );
+
